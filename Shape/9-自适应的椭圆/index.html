@@ -2,9 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Oval</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        section {
+            display: inline-block;
+            margin-left: 2em;
+        }
+        div {
+            display: inline-block;
+            width: 200px;
+            height: 120px;
+            background: dodgerblue;
+        }
+        #test-1 {
+            border-radius: 50% / 50%;
+        }
+        #test-2 {
+            border-radius: 50% / 100% 100% 0 0;
+        }
+        #test-3 {
+            border-radius: 100% 0 0 100% / 50%;
+        }
+        #test-4 {
+            border-radius: 100% 0 0 0 ;
+        }
+    </style>
 </head>
 <body>
-
+    <section>
+        <div id="test-1"></div>
+        <blockquote>椭圆,水平和垂直半径皆为50%</blockquote>
+    </section>
+    <section>
+        <div id="test-2"></div>
+        <blockquote>半椭圆,左右水平半径为50%,左上和右上垂直半径为100%</blockquote>
+    </section>
+    <section>
+        <div id="test-3"></div>
+        <blockquote>上下垂直半径皆为50%,左上左下水平半径为100%</blockquote>
+    </section>
+    <section>
+        <div id="test-4"></div>
+        <blockquote>1/4椭圆,左上角水平垂直半径为100%,其余全为0</blockquote>
+    </section>
 </body>
 </html>

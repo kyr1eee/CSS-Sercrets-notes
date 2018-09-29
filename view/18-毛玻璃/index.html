@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frosted glass</title>
+    <style>
+        body, main::before {
+            background: url("bg.jpg") 0 / cover fixed;
+        }
+        main {
+            position: relative;
+            margin: 10em auto;
+            padding: 1em;
+            max-width: 30em;
+            font-size: 1.5em;
+            border-radius: .3em;
+            box-shadow: 0 0 0 1px hsla(0,0%,100%,.3) inset,
+            0 .5em 1em rgba(0, 0, 0, 0.6);
+            text-shadow: 0 1px 1px hsla(0,0%,100%,.3);
+            background: hsla(0,0%,100%,.25) border-box;
+            overflow: hidden;
+        }
+        main::before {
+            position: absolute;
+            top: 0;bottom: 0;left: 0;right: 0;
+            content: '';
+            filter: blur(20px);
+            z-index: -1;
+            margin: -30px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <blockquote>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+            box-shadow:  h-shadow(水平阴影) v-shadow(垂直阴影) blur(模糊半径) spread(阴影尺寸) color inset(内部阴影)
+            hsla(h-色调, s-饱和度, l-亮度, a-透明度)
+            background-clip: border-box ,背景绘制区域
+            <footer>
+                <cite>
+                    对伪元素进行处理,定位到元素下层,main::before伪元素添加毛玻璃效果<br>
+                    边缘模糊效果消退,将伪元素尺寸向外扩展30px
+                </cite>
+            </footer>
+        </blockquote>
+    </main>
+</body>
+</html>

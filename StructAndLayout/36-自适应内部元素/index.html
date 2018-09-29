@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>internal element width</title>
+    <style>
+        #demo1 {
+            max-width: 500px;
+            max-width: min-content;
+            margin: auto;
+        }
+        #demo1 > img {
+            max-width: inherit;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+    <figure id="demo1">
+        <figcaption>Lorem ipsum dolor sit amet, consectetur adipisicing elit</figcaption>
+        <img src="fairytail.jpg" width="300px" height="300px"/>
+        <figcaption>min-content为容器内最大不可断行元素的宽度,设置max-width:inherit平稳退化,继承max-width:500px</figcaption>
+    </figure>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+</body>
+</html>

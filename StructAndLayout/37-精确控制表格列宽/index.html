@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contdl Table Column Width</title>
+    <style>
+        .yes {
+            table-layout: fixed;
+            width: 800px;
+        }
+        .test {
+            width: 100px;
+        }
+        table {
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+        td {
+            border: 10px solid #aaa;
+        }
+        h1+p {
+            color : dodgerblue;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <h1>table-layout实现固定表格布局</h1>
+    <p>h1+p相邻元素选择器</p>
+    <table class="yes">
+        <tbody>
+        <tr>
+            <td>固定表格布局算法....</td>
+            <td>边框坍塌,border-collapse:collapse,合并边框模型</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="yes">
+        <tbody>
+        <tr>
+            <td>为表格元素设置固定宽度,不指定任何宽度则平均分配</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="yes">
+        <tbody>
+        <tr>
+            <td class="test">指定宽度</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="yes">
+        <tbody>
+        <tr>
+            <td class="test">指定宽度</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="no">
+        <tbody>
+        <tr>
+            <td>非固定表格布局,自动变化的单元格长度</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="no">
+        <tbody>
+        <tr>
+            <td>非固定表格布局,自动变化的单元格长度,Lorem ipsum dolor sit amet, consectetur adipisicing elit</td>
+            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+</body>
+</html>

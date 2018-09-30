@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parallelogram</title>
+    <style>
+        section {
+            margin: 0 auto;
+            width: max-content;
+        }
+        a {
+            position: relative;
+            width: 100px;
+            height: 50px;
+            float: left;
+            text-align: center;
+            line-height: 30px;
+            font-size: 20px;
+            padding-top: 15px;
+        }
+        a::before {
+            content: '';
+            position: absolute;
+            top: 0;bottom: 0;left: 0;right: 0;
+            background: dodgerblue;
+            z-index: -1;
+            transform: skew(-45deg);
+        }
+
+    </style>
+</head>
+<body>
+<section>
+    <a>Home</a>
+    <a>Project</a>
+    <a>Back</a>
+</section>
+</body>
+</html>
